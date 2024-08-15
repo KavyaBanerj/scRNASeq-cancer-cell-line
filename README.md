@@ -30,8 +30,8 @@ Single-cell RNA sequencing (scRNA-seq) allows for the capture of the transcripto
   - **Resistance Mechanisms**: Mutations in the HER2 receptor can prevent trastuzumab from binding effectively. Cancer cells may activate other growth factor receptors or downstream signaling pathways (e.g., PI3K/AKT pathway) to bypass the blocked HER2 signaling. Some cancer cells may downregulate or lose HER2 expression over time, making them less susceptible to trastuzumab (Roviello et al., 2021).
 
 - **Treatment: Bevacizumab -> Target: VEGF**
-  - **VEGF (Vascular Endothelial Growth Factor)**: VEGF is a signal protein that stimulates the formation of blood vessels (angiogenesis). VEGF binds to its receptors (primarily VEGFR-2) on the surface of endothelial cells, promoting their proliferation and new vessel formation. This process is hijacked by tumors to ensure an adequate blood supply, facilitating their growth and metastasis (Kieran et al., 2012). VEGF is overexpressed in a variety of cancers, including colorectal, lung, kidney, and glioblastoma.
-  - **Pathway Activation**: Often activated by hypoxic conditions within the tumor microenvironment. Tumor cells release VEGF in response to low oxygen levels, which then binds to VEGF receptors on endothelial cells, triggering angiogenesis (Liu et al., 2023).
+  - **VEGF (Vascular Endothelial Growth Factor)**: VEGF is a signal protein that stimulates the formation of blood vessels (angiogenesis). VEGF binds to its receptors (primarily VEGFR-2) on the surface of endothelial cells, promoting their proliferation and new vessel formation. Tumors hijack this process to ensure an adequate blood supply, facilitating their growth and metastasis (Kieran et al., 2012). VEGF is overexpressed in a variety of cancers, including colorectal, lung, kidney, and glioblastoma.
+  - **Pathway Activation**: Often activated by hypoxic conditions within the tumor microenvironment. Tumor cells release VEGF in response to low oxygen levels, binding to VEGF receptors on endothelial cells, triggering angiogenesis (Liu et al., 2023).
   - **Bevacizumab**: By inhibiting VEGF, bevacizumab reduces the blood supply to tumors, thereby inhibiting their growth and spread.
   - **Resistance Mechanisms**: Tumors may activate alternative angiogenic factors (e.g., FGF, PDGF) to continue blood vessel formation despite VEGF inhibition. Some tumors may produce higher levels of VEGF to overcome the inhibitory effects of bevacizumab. Changes in the tumor microenvironment, such as increased pericyte coverage of blood vessels, can make angiogenesis less dependent on VEGF signaling.
 
@@ -56,9 +56,9 @@ The study identified 12 recurrent heterogeneity programs (RHPs), including 2 rel
 
 - **How did the authors handle the potential caveat of co-culturing cell lines before profiling by scRNA-seq? Why do you think that caveat was or was not adequately addressed?**
 
-  The study included a control experiment where six cell lines were either co-cultured or combined immediately before profiling for a direct comparison to evaluate the effects of co-culturing. Their findings indicated that while co-culturing had a modest effect on average gene expression, the patterns of heterogeneity within each cell line remained highly consistent across both co-cultured and non-co-cultured conditions based on the pairwise correlations on the NMF programs (Fig. S1C–F).
+  The study included a control experiment where six cell lines were either co-cultured or combined immediately before profiling for a direct comparison to evaluate the effects of co-culturing. Their findings indicated that while co-culturing had a modest impact on average gene expression, the patterns of heterogeneity within each cell line remained highly consistent across both co-cultured and non-co-cultured conditions based on the pairwise correlations on the NMF programs (Fig. S1C–F).
 
-  In terms of whether this caveat was adequately addressed, the study conducts a controlled and adequate analysis for the scope of the study. However, the modest effects observed could still raise concerns about the potential for co-culturing to influence specific cellular behaviors or interactions if this dataset is used to study cell-cell interactions, which can lead to discrete subpopulations within the co-cultures.
+  In terms of whether this caveat was adequately addressed, the study conducts a controlled and adequate analysis of the scope of the study. However, the modest effects observed could still raise concerns about the potential for co-culturing to influence specific cellular behaviors or interactions if this dataset is used to study cell-cell interactions, which can lead to discrete subpopulations within the co-cultures.
 
 - **The authors identified discrete subpopulations of cells within a subset of individual cell lines (Fig. 2A-B). What might be the reason why some cell lines have these discrete subpopulations while others do not?**
 
@@ -66,9 +66,7 @@ The study identified 12 recurrent heterogeneity programs (RHPs), including 2 rel
 
 - **What are Recurrent Heterogeneous Programs (RHPs) and how were they defined?**
 
-  Recurrent Heterogeneous Programs (RHPs) are clusters of gene expression programs that vary across multiple cell lines. Specifically, an RHP is a set of genes that appeared in at least 25% of the programs within a specific cluster. These were identified by comparing expression programs derived
-
- from two methods: DBSCAN and Non-negative Matrix Factorization (NMF).
+  Recurrent Heterogeneous Programs (RHPs) are clusters of gene expression programs that vary across multiple cell lines. Specifically, an RHP is a set of genes that appeared in at least 25% of the programs within a specific cluster. These were identified by comparing expression programs derived from two methods: DBSCAN and Non-negative Matrix Factorization (NMF).
 
 - **How do the identified RHPs relate to in vivo programs of heterogeneity in tumors, and what evidence supports this relationship?**
 
